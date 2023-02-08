@@ -32,6 +32,8 @@ def bill():
  #     # # #      #      #     # # #      #    # #      #   #  
  ######  # ###### ######  #####  # #      #    # ###### #    # 2.1
  Gathering information for your Website or IP address""")
+In support of the Coding Family
+created by Dan Maffia 
     print()
 
 def banner():
@@ -54,7 +56,7 @@ def iseeverything():
     try:
         what = input('\033[92mType (w)for website or (I) IP address then (enter) to gather your info : ')
         if what[0].upper() == 'W':
-            victim = input('Enter website: ')
+            victim = input('Enter website without the www: ')
             banner()
         elif what[0].upper() == 'I':
             victim = input('Enter the IP address (or domain to get IP address of this domain): ')
@@ -185,7 +187,11 @@ def iseeverything():
         elif choose == '21':
             print("""\033[93mBillCipher 2.1 - Information Gathering of a Website or IP address
 
-AUTHOR: http://danmaffiayounghack.blogspot.com/
+AUTHOR: 
+
+https://t.me/danmaffiayounghack
+
+http://danmaffiayounghack.blogspot.com/
         https://t.me/maffia
         """)
             back()
