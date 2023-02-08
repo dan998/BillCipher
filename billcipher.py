@@ -31,9 +31,7 @@ def bill():
  #     # # #      #      #       # #####  #    # #      #####  
  #     # # #      #      #     # # #      #    # #      #   #  
  ######  # ###### ######  #####  # #      #    # ###### #    # 2.1
- Gathering Information for your Website or IP address"""
-In Support of the Coding Family
-recreated by Dan Maffia )
+ Gathering Information for your Website or IP address""")
     print()
 
 def banner():
