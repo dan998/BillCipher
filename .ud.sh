@@ -31,7 +31,6 @@ cd $HOME
 cd BillCipher 
 pip install -r requirements.txt
 pip2 install -r requirements.txt
-python2 billcipher.py
 }
 vid(){
 FILE=$HOME/BillCipher
