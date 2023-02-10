@@ -30,7 +30,7 @@ done
 cd $HOME
 cd BillCipher 
 pip install -r requirements.txt
-pip2 install -r requirements.txt
+pip3 install -r requirements.txt
 }
 vid(){
 FILE=$HOME/BillCipher
