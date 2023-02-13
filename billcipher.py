@@ -28,10 +28,10 @@ def bill():
  #     # # #      #      #     # # #####  #    # ###### #####  
  #     # # #      #      #       # #    # #    # #      #    # 
  ######  # #      #      #       # #    # ###### #####  #    # 
- #     # # #      #      #       # #####  #    # #      #####  
+ #     7# # #      #      #       # #####  #    # #      #####  
  #     # # #      #      #     # # #      #    # #      #   #  
  ######  # ###### ######  #####  # #      #    # ###### #    # 2.1
- Gathering Information for your Website or IP address""")
+ Gathering Information for youpr Website or IP address""")
     print()
 
 def banner():
@@ -44,9 +44,9 @@ def banner():
  6) Page Links                 18) Check and Bypass CloudFlare (use HatCloud)
  7) Zone Transfer              19) Website Copier (use httrack)
  8) HTTP Header                20) Host Info Scanner (use WhatWeb)
- 9) Host Finder                21) About BillCipher
- 10) IP-Locator                22) Fuck Out Of Here (Exit)
- 11) Find Shared DNS Servers
+ 9) Host Finder                21) sslscan
+ 10) IP-Locator                22) About BillCipher
+ 11) Find Shared DNS Servers   23) Fuck Out of Here(Exit)
  12) Get Robots.txt""")
     print()
 
@@ -54,7 +54,7 @@ def iseeverything():
     try:
         what = input('\033[92mType (w)for website or (I) IP address then (enter) to gather your info : ')
         if what[0].upper() == 'W':
-            victim = input('Enter website without the www: ')
+            victim = input('Enter website without the www:')
             banner()
         elif what[0].upper() == 'I':
             victim = input('Enter the IP address (or domain to get IP address of this domain): ')
@@ -65,7 +65,7 @@ def iseeverything():
             print('?')
             iseeverything()
 
-        choose = input('What information would you like to collect? (1-20): ')
+        choose = input('What information would you like to collect? (1-23): ')
 
         if choose == '1':
             dnslook = 'https://api.hackertarget.com/dnslookup/?q='+victim
@@ -183,6 +183,10 @@ def iseeverything():
             back()
 
         elif choose == '21':
+            os.system('sslscan '+victim)
+            back()
+
+        elif choose == '22':
             print("""\033[93mBillCipher 2.1 - Information Gathering of a Website or IP address
 
 AUTHOR: 
@@ -194,13 +198,12 @@ http://danmaffiayounghack.blogspot.com/
         """)
             back()
 
-        elif choose == '22':
+        elif choose == '23':
             exit
 
         else:
             print('?')
-            iseeverything()
-            
+            iseeverything()            
     except socket.gaierror:
         print('Name or service not known!\033[93m')
         print()
